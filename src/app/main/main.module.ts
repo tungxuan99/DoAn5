@@ -7,6 +7,7 @@ import { HeaderComponent } from '../layout/header/header.component';
 import { FooterComponent } from '../layout/footer/footer.component';
 import { MenuComponent } from '../layout/menu/menu.component';
 import { SukienComponent } from './sukien/sukien.component';
+import { GioithieuComponent } from './gioithieu/gioithieu.component';
 
 
 export const mainRoutes: Routes = [
@@ -18,7 +19,10 @@ export const mainRoutes: Routes = [
         },
         {
           path: 'sukien', component: SukienComponent,
-      }
+        },
+        {
+          path: 'gioithieu', component: GioithieuComponent,
+        },
       ]
   }
 ];
@@ -30,7 +34,8 @@ export const mainRoutes: Routes = [
     FooterComponent,
     MainComponent,
     MenuComponent,
-    SukienComponent
+    SukienComponent,
+    GioithieuComponent
   ],
   imports: [
     CommonModule,
