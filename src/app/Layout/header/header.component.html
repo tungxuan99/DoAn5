@@ -17,8 +17,8 @@
                    <li class="html custom html_nav_position_text_top">
                       <div class="topbar-menu">
                          <ul>
-                            <li><a href="index.html">Trang chủ</a></li>
-                            <li><a href="gioi-thieu/index.html">Giới thiệu</a></li>
+                            <li><a [routerLink]="['/']" >Trang chủ</a></li>
+                            <li><a [routerLink]="['/gioithieu']">Giới thiệu</a></li>
                             <li><a href="lien-he/index.html">Liên hệ</a></li>
                             <li><a href="cau-hoi/index.html">Câu hỏi</a></li>
                             <li><a href="category/tin-tuc/index.html">Chi phí</a></li>
@@ -37,8 +37,8 @@
              <!-- Logo -->
              <div id="logo" class="flex-col logo">
                 <!-- Header logo -->
-                <a href="index.html" title="monachimpgroup" rel="home">
-                <img width="200" height="100" src="./assets/wp-content/uploads/2019/11/681915-.png" class="header_logo header-logo" alt="monachimpgroup"/><img  width="200" height="100" src="./assets/wp-content/uploads/2019/11/681915-.png" class="header-logo-dark" alt="monachimpgroup"/></a>
+                <a [routerLink]="['/']" title="Trường THPT Đa Phúc" rel="home">
+                <img width="200" height="100" src="./assets/wp-content/uploads/logo1.jpg" class="header_logo header-logo" alt="Trường THPT Đa Phúc"/></a>
              </div>
              <!-- Mobile Left Elements -->
              <div class="flex-col show-for-medium flex-left">
@@ -85,30 +85,6 @@
                 </ul>
              </div>
              <!-- Mobile Right Elements -->
-             <div class="flex-col show-for-medium flex-right">
-                <ul class="mobile-nav nav nav-right ">
-                   <li class="cart-item has-icon">
-                      <a href="gio-hang/index.html" class="header-cart-link off-canvas-toggle nav-top-link is-small" data-open="#cart-popup" data-class="off-canvas-cart" title="Giỏ hàng" data-pos="right">
-                      <span class="cart-icon image-icon">
-                      <strong>0</strong>
-                      </span> 
-                      </a>
-                      <!-- Cart Sidebar Popup -->
-                      <div id="cart-popup" class="mfp-hide widget_shopping_cart">
-                         <div class="cart-popup-inner inner-padding">
-                            <div class="cart-popup-title text-center">
-                               <h4 class="uppercase">Giỏ hàng</h4>
-                               <div class="is-divider"></div>
-                            </div>
-                            <div class="widget_shopping_cart_content">
-                               <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
-                            </div>
-                            <div class="cart-sidebar-content relative"></div>
-                         </div>
-                      </div>
-                   </li>
-                </ul>
-             </div>
           </div>
           <!-- .header-inner -->
           <!-- Header divider -->

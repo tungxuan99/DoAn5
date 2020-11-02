@@ -25,4 +25,5 @@ export class BaseComponent {
          this._renderer.appendChild(document.body, script);
          return script;
        }
+      
 }
