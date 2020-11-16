@@ -10,7 +10,7 @@ import 'rxjs/add/operator/takeUntil';
   styleUrls: ['./sukien.component.css']
 })
 export class SukienComponent extends BaseComponent implements OnInit {
-  list_tintuc:any;
+  public list_tintuc:any;
   constructor(injector: Injector) { 
     super(injector);
   }

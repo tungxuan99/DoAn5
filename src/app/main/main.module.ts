@@ -8,6 +8,9 @@ import { FooterComponent } from '../layout/footer/footer.component';
 import { MenuComponent } from '../layout/menu/menu.component';
 import { SukienComponent } from './sukien/sukien.component';
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
+import { XemdiemComponent } from './xemdiem/xemdiem.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 
 export const mainRoutes: Routes = [
@@ -23,6 +26,9 @@ export const mainRoutes: Routes = [
         {
           path: 'gioithieu', component: GioithieuComponent,
         },
+        {
+          path: 'xemdiem', component: XemdiemComponent,
+        },
       ]
   }
 ];
@@ -35,11 +41,17 @@ export const mainRoutes: Routes = [
     MainComponent,
     MenuComponent,
     SukienComponent,
-    GioithieuComponent
+    GioithieuComponent,
+    XemdiemComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(mainRoutes)
-  ]
+  ],  
+  exports: [RouterModule],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class MainModule { }

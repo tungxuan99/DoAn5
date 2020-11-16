@@ -1,0 +1,44 @@
+<main id="main" class="">
+    <div id="content" role="main" class="content-area">
+       <div class="gap-element clearfix" style="display:block; height:auto; padding-top:15px"></div>
+       <section class="section dichvu-blog" id="section_544849787">
+          <div class="bg section-bg fill bg-fill  bg-loaded" >
+          </div>
+          <div class="col-md-12">
+            <form class="form-horizontal" [formGroup]="formsearch"  (ngSubmit)="search()">
+              <div class="row form-group">
+                <div class="col-sm-6">
+                    <input formControlName="Search" class="form-control"  type="text" placeholder="Nhập mã sinh viên hoặc họ tên" style="width: 100%;" />
+                </div>
+                <div class="col-sm-3">
+                    <button (click)="search()" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                </div>
+              </div>
+            </form>
+          </div>
+            <table class="table table-bordered table-striped">
+                <thead class="text-center">
+                    <tr>
+                        <th>TT</th>
+                        <th>Mã học sinh</th>
+                        <th>Tên học sinh</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Môn học</th>
+                        <th>Điểm học kỳ</th>
+                    </tr>
+                </thead>
+                <tbody id="lh-list" name="lh-list">
+                        <ng-container *ngFor="let hs of diems, let i= index">
+                        <tr> 
+                            <td>{{i+1}}</td>
+                            <td>{{ hs.maHS }}</td>
+                            <td>{{ hs.tenHS }}</td>
+                            <td>{{ hs.gioiTinh }}</td>
+                        </tr>
+                        </ng-container>
+                </tbody>
+            </table>
+        </section>
+    </div>
+ </main>

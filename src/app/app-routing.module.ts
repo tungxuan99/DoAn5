@@ -3,6 +3,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './lib/auth.guard';
 import { RoleGuard } from './lib/auth.guard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
   
   {
