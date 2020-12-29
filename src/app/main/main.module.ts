@@ -11,6 +11,8 @@ import { GioithieuComponent } from './gioithieu/gioithieu.component';
 import { XemdiemComponent } from './xemdiem/xemdiem.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { TintucComponent } from './tintuc/tintuc.component';
+import { CtTintucComponent } from './ct-tintuc/ct-tintuc.component';
 
 
 export const mainRoutes: Routes = [
@@ -22,6 +24,12 @@ export const mainRoutes: Routes = [
         },
         {
           path: 'sukien', component: SukienComponent,
+        },
+        {
+          path: 'tintuc', component: TintucComponent,
+        },
+        {
+          path: 'ct-tintuc/:id', component: CtTintucComponent,
         },
         {
           path: 'gioithieu', component: GioithieuComponent,
@@ -42,7 +50,9 @@ export const mainRoutes: Routes = [
     MenuComponent,
     SukienComponent,
     GioithieuComponent,
-    XemdiemComponent
+    XemdiemComponent,
+    TintucComponent,
+    CtTintucComponent,
   ],
   imports: [
     CommonModule,

@@ -3,13 +3,12 @@ import { Component, OnInit,Injector } from '@angular/core';
 import { Observable} from 'rxjs';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/operator/takeUntil';
-
 @Component({
-  selector: 'app-sukien',
-  templateUrl: './sukien.component.html',
-  styleUrls: ['./sukien.component.css']
+  selector: 'app-tintuc',
+  templateUrl: './tintuc.component.html',
+  styleUrls: ['./tintuc.component.css']
 })
-export class SukienComponent extends BaseComponent implements OnInit {
+export class TintucComponent  extends BaseComponent implements OnInit {
   public list_tintuc:any;
   constructor(injector: Injector) { 
     super(injector);
@@ -31,5 +30,5 @@ export class SukienComponent extends BaseComponent implements OnInit {
     }
     return text;
   }
-}
 
+}

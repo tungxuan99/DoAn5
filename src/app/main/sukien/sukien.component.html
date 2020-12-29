@@ -9,24 +9,25 @@
              <div class="row"  id="row-1157938346">
                 <div class="col small-12 large-12"  >
                    <div class="col-inner"  >
-                      <div class="intro">
-                         <h3>Lợi ích sinh viên</h3>
-                         <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. </p>
+                      <div class="intro text-center">
+                         <h3><b>Các sự kiện</b></h3>
+                         <!-- <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. </p> -->
                       </div>
+                      <br>
                       <div class="row"  id="row-1846436115">
                         <ng-container *ngFor="let tt of list_tintuc">
-                         <div class="col medium-4 small-12 large-4"  >
+                         <div class="col-sm-4 medium-4 small-12 "  >
                             <div class="col-inner"  >
                                <div class="box has-hover   has-hover box-text-bottom" >
                                   <div class="box-image" >
                                      <div class="image-cover" style="padding-top:56.25%;">
-                                        <img width="250" height="188" src="./assets/wp-content/uploads/2019/11/gallery-12-250x188.jpg" class="attachment-original size-original" alt="" />											
+                                        <img width="250" height="188" src="./assets/wp-content/uploads/2019/11/{{tt.anh}}" class="attachment-original size-original" alt="" />											
                                      </div>
                                   </div>
                                   <div class="box-text text-left" >
                                      <div class="box-text-inner">
-                                        <h4>{{tt.tieuDe}}</h4>
-                                        <p>L{{tt.noiDung}}</p>
+                                        <h4>{{catText(tt.tieuDe, 30)}}</h4>
+                                        <p>{{catText(tt.noiDung, 140)}}</p>
                                      </div>
                                   </div>
                                </div>

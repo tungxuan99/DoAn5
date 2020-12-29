@@ -6,7 +6,6 @@ import { JwtInterceptor } from './lib/jwt.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from 'primeng/table';
@@ -17,12 +16,10 @@ import {DropdownModule} from 'primeng/dropdown';
 import {FileUploadModule} from 'primeng/fileupload';
 import { CommonModule } from '@angular/common'; 
 import {DatePipe} from '@angular/common';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     
   ],
   imports: [
@@ -39,7 +36,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     DropdownModule,
     FileUploadModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
   ],
   exports:[CommonModule,
     FormsModule,
