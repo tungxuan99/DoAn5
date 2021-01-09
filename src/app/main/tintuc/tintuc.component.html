@@ -14,15 +14,15 @@
           <div class="post-sidebar  col-sm-3">
              <div id="secondary" class="widget-area " role="complementary">
                 <aside id="search-2" class="widget widget_search">
-                   <form method="get" class="searchform" action="http://mauweb.monamedia.net/chimpgroup/" role="search">
+                   <form class="searchform" role="form" [formGroup]="formsearch"  (ngSubmit)="search()">
                       <div class="flex-row relative">
                          <div class="flex-col flex-grow">
-                            <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm&hellip;" />
+                            <input type="text" formControlName="hoten" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm&hellip;" />
                          </div>
                          <!-- .flex-col -->
                          <div class="flex-col">
                             <button type="submit" class="ux-search-submit submit-button secondary button icon mb-0">
-                            <i class="icon-search" ></i>				</button>
+                            <i class="icon-search" ></i></button>
                          </div>
                          <!-- .flex-col -->
                       </div>
@@ -34,82 +34,17 @@
                    <span class="widget-title "><span>Bài viết mới</span></span>
                    <div class="is-divider small"></div>
                    <ul>
-                      <li class="recent-blog-posts-li">
+                      <li class="recent-blog-posts-li" *ngFor="let tm of tinmois">
                          <div class="flex-row recent-blog-posts align-top pt-half pb-half">
                             <div class="flex-col mr-half">
-                               <div class="badge post-date  badge-circle">
-                                  <div class="badge-inner bg-fill" style="background: url(../../wp-content/uploads/2019/11/gallery-7-250x188-150x150.jpg); border:0;">
-                                  </div>
+                               <div class="badge post-date badge-circle" >
+                                  <div class="badge-inner bg-fill" style="width: 80px !important; height: 40px;" style="background: url(./assets/wp-content/uploads/2019/11/{{tm.anh}}); border:0;"></div>
                                </div>
                             </div>
                             <!-- .flex-col -->
                             <div class="flex-col flex-grow">
-                               <a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-5/index.html" title="Trở thành giáo viên tốt hơn trong ngành giáo dục">Trở thành giáo viên tốt hơn trong ngành giáo dục</a>
-                               <span class="post_comments op-7 block is-xsmall"><a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-5/index.html#respond"></a></span>
-                            </div>
-                         </div>
-                         <!-- .flex-row -->
-                      </li>
-                      <li class="recent-blog-posts-li">
-                         <div class="flex-row recent-blog-posts align-top pt-half pb-half">
-                            <div class="flex-col mr-half">
-                               <div class="badge post-date  badge-circle">
-                                  <div class="badge-inner bg-fill" style="background: url(../../wp-content/uploads/2019/11/11-150x137.jpg); border:0;">
-                                  </div>
-                               </div>
-                            </div>
-                            <!-- .flex-col -->
-                            <div class="flex-col flex-grow">
-                               <a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-4/index.html" title="Trở thành giáo viên tốt hơn trong ngành giáo dục">Trở thành giáo viên tốt hơn trong ngành giáo dục</a>
-                               <span class="post_comments op-7 block is-xsmall"><a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-4/index.html#respond"></a></span>
-                            </div>
-                         </div>
-                         <!-- .flex-row -->
-                      </li>
-                      <li class="recent-blog-posts-li">
-                         <div class="flex-row recent-blog-posts align-top pt-half pb-half">
-                            <div class="flex-col mr-half">
-                               <div class="badge post-date  badge-circle">
-                                  <div class="badge-inner bg-fill" style="background: url(../../wp-content/uploads/2019/11/10-150x137.jpg); border:0;">
-                                  </div>
-                               </div>
-                            </div>
-                            <!-- .flex-col -->
-                            <div class="flex-col flex-grow">
-                               <a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-3/index.html" title="Trở thành giáo viên tốt hơn trong ngành giáo dục">Trở thành giáo viên tốt hơn trong ngành giáo dục</a>
-                               <span class="post_comments op-7 block is-xsmall"><a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-3/index.html#respond"></a></span>
-                            </div>
-                         </div>
-                         <!-- .flex-row -->
-                      </li>
-                      <li class="recent-blog-posts-li">
-                         <div class="flex-row recent-blog-posts align-top pt-half pb-half">
-                            <div class="flex-col mr-half">
-                               <div class="badge post-date  badge-circle">
-                                  <div class="badge-inner bg-fill" style="background: url(../../wp-content/uploads/2019/11/gallery-6-250x188-150x150.jpg); border:0;">
-                                  </div>
-                               </div>
-                            </div>
-                            <!-- .flex-col -->
-                            <div class="flex-col flex-grow">
-                               <a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-2/index.html" title="Trở thành giáo viên tốt hơn trong ngành giáo dục">Trở thành giáo viên tốt hơn trong ngành giáo dục</a>
-                               <span class="post_comments op-7 block is-xsmall"><a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc-2/index.html#respond"></a></span>
-                            </div>
-                         </div>
-                         <!-- .flex-row -->
-                      </li>
-                      <li class="recent-blog-posts-li">
-                         <div class="flex-row recent-blog-posts align-top pt-half pb-half">
-                            <div class="flex-col mr-half">
-                               <div class="badge post-date  badge-circle">
-                                  <div class="badge-inner bg-fill" style="background: url(../../wp-content/uploads/2019/11/gallery-5-250x188-150x150.jpg); border:0;">
-                                  </div>
-                               </div>
-                            </div>
-                            <!-- .flex-col -->
-                            <div class="flex-col flex-grow">
-                               <a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc/index.html" title="Trở thành giáo viên tốt hơn trong ngành giáo dục">Trở thành giáo viên tốt hơn trong ngành giáo dục</a>
-                               <span class="post_comments op-7 block is-xsmall"><a href="../../tro-thanh-giao-vien-tot-hon-trong-nganh-giao-duc/index.html#respond"></a></span>
+                               <a [routerLink]="['/ct-tintuc',tm.maTinTuc]" title="">{{catText(tm.tieuDe,50)}}</a>
+                               <span class="post_comments op-7 block is-xsmall"><a [routerLink]="['/ct-tintuc',tm.maTinTuc]"></a></span>
                             </div>
                          </div>
                          <!-- .flex-row -->
@@ -156,17 +91,26 @@
                 </div>
                 <!-- .col -->
              </div>
+             <!-- <div class="row form-group">
+               
+             </div> -->
              <!-- page -->
-             <!-- <ul class="page-numbers nav-pagination links text-center">
-                <li><span aria-current='page' class='page-number current'>1</span></li>
+             <ul class="page-numbers nav-pagination links text-center" style="width: 20px;">
+               <div class="col-xs-12 align-center">
+                  <ngb-pagination [collectionSize]="totalRecords" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+                </div>
+                <!-- <li><span aria-current='page' class='page-number current'>1</span></li>
                 <li><a class='page-number' href='page/2/index.html'>2</a></li>
-                <li><a class="next page-number" href="page/2/index.html"><i class="icon-angle-right" ></i></a></li>
-             </ul> -->
+                <li><a class="next page-number" href="page/2/index.html"><i class="icon-angle-right" ></i></a></li> -->
+             </ul>
           </div>
+          
           <!-- .large-9 -->
        </div>
        <!-- .row -->
+       
     </div>
+    
     <!-- .page-wrapper .blog-wrapper -->
  </main>
  <!-- #main -->

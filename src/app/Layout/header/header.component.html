@@ -12,21 +12,7 @@
                 </ul>
              </div>
              <!-- center -->
-             <div class="flex-col hide-for-medium flex-right">
-                <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
-                   <li class="html custom html_nav_position_text_top">
-                      <div class="topbar-menu">
-                         <ul>
-                            <li><a [routerLink]="['/']" >Trang chủ</a></li>
-                            <li><a [routerLink]="['/gioithieu']">Giới thiệu</a></li>
-                            <li><a href="lien-he/index.html">Liên hệ</a></li>
-                            <li><a href="cau-hoi/index.html">Câu hỏi</a></li>
-                            <li><a href="category/tin-tuc/index.html">Chi phí</a></li>
-                         </ul>
-                      </div>
-                   </li>
-                </ul>
-             </div>
+             
              <!-- .flex-col right -->
           </div>
           <!-- .flex-row -->
@@ -58,31 +44,42 @@
              </div>
              <!-- Right Elements -->
              <div class="flex-col hide-for-medium flex-right">
-                <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+                <!-- <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
                    <li class="html custom html_top_right_text"><span class="mona-html span"><b>Tìm kiếm</b></span></li>
                    <li class="header-search-form search-form html relative has-icon">
                       <div class="header-search-form-wrapper">
                          <div class="searchform-wrapper ux-search-box relative is-normal">
-                            <form role="search" method="get" class="searchform" action="http://mauweb.monamedia.net/chimpgroup/">
+                            <form role="search" method="get" class="searchform">
                                <div class="flex-row relative">
                                   <div class="flex-col flex-grow">
-                                     <input type="search" class="search-field mb-0" name="s" value="" placeholder="Tìm kiếm&hellip;" />
+                                     <input type="text" size="50" class="search-field mb-0" name="s" value="" placeholder="Tìm kiếm&hellip;" />
                                      <input type="hidden" name="post_type" value="product" />
                                   </div>
-                                  <!-- .flex-col -->
                                   <div class="flex-col">
                                      <button type="submit" class="ux-search-submit submit-button secondary button icon mb-0">
-                                     <i class="icon-search" ></i>				</button>
+                                     <i class="icon-search" ></i></button>
                                   </div>
-                                  <!-- .flex-col -->
                                </div>
-                               <!-- .flex-row -->
                                <div class="live-search-results text-left z-top"></div>
                             </form>
                          </div>
                       </div>
                    </li>
-                </ul>
+                </ul> -->
+                <div class="flex-col hide-for-medium flex-right">
+                  <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+                     <li class="html custom html_nav_position_text_top">
+                        <div class="topbar-menu">
+                           <ul>
+                              <li><a [routerLink]="['/']" >Trang chủ</a></li>
+                              <li><a [routerLink]="['/gioithieu']">Giới thiệu</a></li>
+                              <li><a [routerLink]="['/tintuc']">Tin tức</a></li>
+                              <li><a [routerLink]="['/sukien']">Sự kiện</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
              </div>
              <!-- Mobile Right Elements -->
           </div>
